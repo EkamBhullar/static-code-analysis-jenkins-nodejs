@@ -9,12 +9,12 @@ pipeline {
         steps {
             echo 'Installing dependencies...'
             sh 'npm install'
-            sh 'npm install eslint'
+            sh 'npm install -g eslint'
         }
 }
   stage ('Linting Analysis') {
         steps {
-            sh ' ./node_modules/.bin/eslint -f checkstyle src > eslint.xml'
+            sh 'eslint -f checkstyle src > eslint.xml'
         }
         post {
             always {
