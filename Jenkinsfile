@@ -3,6 +3,8 @@ pipeline {
  
   tools {nodejs "node"}
   
+  stages {
+  
   stage('Install dependencies') {
         steps {
             echo 'Installing dependencies...'
@@ -21,7 +23,7 @@ pipeline {
         }
     }
  
-  stages {
+  
     
     stage('Node test') {
       steps {
