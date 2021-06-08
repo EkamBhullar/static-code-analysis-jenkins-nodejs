@@ -14,7 +14,7 @@ pipeline {
 }
   stage ('Linting Analysis') {
         steps {
-            sh 'npx eslint -f checkstyle src > eslint.xml'
+            sh 'eslint -f checkstyle src > eslint.xml'
         }
         post {
             always {
