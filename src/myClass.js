@@ -1,6 +1,6 @@
 class MyClass {
     constructor() {
-        console.log("in constructor")
+        console.log("in constructor");
     }
     add(arg1, arg2) {
         var result;
