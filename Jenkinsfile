@@ -14,7 +14,7 @@ pipeline {
 }
   stage ('Linting Analysis') {
         steps {
-            sh ' ./node_modules/eslint/bin/eslint.js -f checkstyle src > eslint.xml'
+            sh ' ./node_modules/.bin/eslint -f checkstyle src > eslint.xml'
         }
         post {
             always {
