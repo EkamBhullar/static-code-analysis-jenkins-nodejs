@@ -31,11 +31,7 @@ pipeline {
         sh 'npm install -g mocha'
         sh 'mocha "./specs/**/*.spec.js" --reporter mocha-junit-reporter '
       }
-        post {
-            always {
-                recordIssues enabledForFailure: true, aggregatingResults: true, tool: checkStyle(pattern: 'test-results.xml')
-            }
-        }
+        
     }
   }
 }
