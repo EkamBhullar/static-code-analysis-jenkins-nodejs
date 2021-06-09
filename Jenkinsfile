@@ -27,8 +27,14 @@ pipeline {
     
     stage('Node test') {
       steps {
-        sh 'npm test'
+        sh 'npm install mocha-junit-reporter'
+        sh 'mocha test --reporter mocha-junit-reporter'
       }
+        post {
+            always {
+                recordIssues enabledForFailure: true, aggregatingResults: true, tool: checkStyle(pattern: 'test-results.xml')
+            }
+        }
     }
   }
 }
