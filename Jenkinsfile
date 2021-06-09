@@ -27,7 +27,7 @@ pipeline {
     
     stage('Node test') {
       steps {
-        sh 'npm config ls'
+        sh 'npm test'
       }
     }
   }
