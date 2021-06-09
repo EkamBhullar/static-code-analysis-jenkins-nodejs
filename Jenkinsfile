@@ -28,6 +28,7 @@ pipeline {
     stage('Node test') {
       steps {
         sh 'npm install mocha-junit-reporter'
+        sh 'npm install -g mocha'
         sh 'mocha test --reporter mocha-junit-reporter'
       }
         post {
