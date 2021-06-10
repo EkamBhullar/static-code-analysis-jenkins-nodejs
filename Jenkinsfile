@@ -18,7 +18,7 @@ pipeline {
       }
       steps {
         sh 'eslint -f checkstyle src > eslint.xml'
-        junit 'eslint.xml'
+        
       }
     }
 
