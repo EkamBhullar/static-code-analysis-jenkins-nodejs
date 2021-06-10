@@ -17,8 +17,8 @@ pipeline {
 
       }
       steps {
-        sh 'eslint -f checkstyle src index.js > eslint.xml'
-        
+        sh '''eslint -f checkstyle src index.js 
+eslint -f checkstyle src index.js > eslint.xml'''
       }
     }
 
