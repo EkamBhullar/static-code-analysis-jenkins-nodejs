@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Install dependencies') {
       steps {
-        echo 'Installing dependencies...'
+        echo 'Installing dependencies........'
         sh 'npm install'
         sh 'npm install -g eslint'
       }
