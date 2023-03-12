@@ -1,2 +1,2 @@
 # POC01
-This is a POC on how to automate test using Jenkins.
+This is a POC on how to automate unit tests in nodejs using Jenkins.
